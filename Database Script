@@ -1,0 +1,602 @@
+USER TABLE!
+
+mysql> CREATE TABLE USER (USER_ID INT AUTO_INCREMENT PRIMARY KEY, USERNAME VARCHAR(20) UNIQUE NOT NULL, PASSWORD VARCHAR(255) NOT NULL);
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> DESC USER;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| USER_ID  | int(11)      | NO   | PRI | NULL    | auto_increment |
+| USERNAME | varchar(20)  | NO   | UNI | NULL    |                |
+| PASSWORD | varchar(255) | NO   |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Donator TABLE!
+
+mysql> CREATE TABLE Donator (USER_ID INT, FNAME VARCHAR(20) NOT NULL, LNAME VARCHAR(20) NOT NULL, DOB DATE NOT NULL, RES_ADDRESS VARCHAR(60) NOT NULL, SUBURB VARCHAR(20) NOT NULL, CONTACT_1 VARCHAR(11) NOT NULL, CONTACT_2 VARCHAR(11), EMAIL VARCHAR(50) NOT NULL UNIQUE);
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> DESC Donator;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| USER_ID     | int(11)     | YES  |     | NULL    |       |
+| FNAME       | varchar(20) | NO   |     | NULL    |       |
+| LNAME       | varchar(20) | NO   |     | NULL    |       |
+| DOB         | date        | NO   |     | NULL    |       |
+| RES_ADDRESS | varchar(60) | NO   |     | NULL    |       |
+| SUBURB      | varchar(20) | NO   |     | NULL    |       |
+| CONTACT_1   | varchar(11) | NO   |     | NULL    |       |
+| CONTACT_2   | varchar(11) | YES  |     | NULL    |       |
+| EMAIL       | varchar(50) | NO   | PRI | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+9 rows in set (0.00 sec)
+
+mysql>  ALTER TABLE Donator ADD FOREIGN KEY (USER_ID) REFERENCES USER(USER_ID);
+Query OK, 0 rows affected (0.17 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESC Donator;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| USER_ID     | int(11)     | YES  | MUL | NULL    |       |
+| FNAME       | varchar(20) | NO   |     | NULL    |       |
+| LNAME       | varchar(20) | NO   |     | NULL    |       |
+| DOB         | date        | NO   |     | NULL    |       |
+| RES_ADDRESS | varchar(60) | NO   |     | NULL    |       |
+| SUBURB      | varchar(20) | NO   |     | NULL    |       |
+| CONTACT_1   | varchar(11) | NO   |     | NULL    |       |
+| CONTACT_2   | varchar(11) | YES  |     | NULL    |       |
+| EMAIL       | varchar(50) | NO   | PRI | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+9 rows in set (0.00 sec)
+
+mysql> ALTER TABLE Donator MODIFY COLUMN USER_ID INT NOT NULL;
+Query OK, 0 rows affected (0.13 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESC Donator;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| USER_ID     | int(11)     | NO   | MUL | NULL    |       |
+| FNAME       | varchar(20) | NO   |     | NULL    |       |
+| LNAME       | varchar(20) | NO   |     | NULL    |       |
+| DOB         | date        | NO   |     | NULL    |       |
+| RES_ADDRESS | varchar(60) | NO   |     | NULL    |       |
+| SUBURB      | varchar(20) | NO   |     | NULL    |       |
+| CONTACT_1   | varchar(11) | NO   |     | NULL    |       |
+| CONTACT_2   | varchar(11) | YES  |     | NULL    |       |
+| EMAIL       | varchar(50) | NO   | PRI | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+9 rows in set (0.00 sec)
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Recipient TABLE!
+
+mysql> CREATE TABLE Recipient (USER_ID INT NOT NULL, FNAME VARCHAR(20) NOT NULL, LNAME VARCHAR(20) NOT NULL, DOB DATE NOT NULL, RES_ADDRESS VARCHAR(60) NOT NULL, SUBURB VARCHAR(20) NOT NULL, CONTACT_1 VARCHAR(11) NOT NULL, CONTACT_2 VARCHAR(11), EMAIL VARCHAR(50) NOT NULL UNIQUE);
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> DESC Recipient;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| USER_ID     | int(11)     | NO   |     | NULL    |       |
+| FNAME       | varchar(20) | NO   |     | NULL    |       |
+| LNAME       | varchar(20) | NO   |     | NULL    |       |
+| DOB         | date        | NO   |     | NULL    |       |
+| RES_ADDRESS | varchar(60) | NO   |     | NULL    |       |
+| SUBURB      | varchar(20) | NO   |     | NULL    |       |
+| CONTACT_1   | varchar(11) | NO   |     | NULL    |       |
+| CONTACT_2   | varchar(11) | YES  |     | NULL    |       |
+| EMAIL       | varchar(50) | NO   | PRI | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+9 rows in set (0.00 sec)
+
+mysql> ALTER TABLE Recipient ADD FOREIGN KEY (USER_ID) REFERENCES USER(USER_ID);
+Query OK, 0 rows affected (0.13 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESC Recipient;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| USER_ID     | int(11)     | NO   | MUL | NULL    |       |
+| FNAME       | varchar(20) | NO   |     | NULL    |       |
+| LNAME       | varchar(20) | NO   |     | NULL    |       |
+| DOB         | date        | NO   |     | NULL    |       |
+| RES_ADDRESS | varchar(60) | NO   |     | NULL    |       |
+| SUBURB      | varchar(20) | NO   |     | NULL    |       |
+| CONTACT_1   | varchar(11) | NO   |     | NULL    |       |
+| CONTACT_2   | varchar(11) | YES  |     | NULL    |       |
+| EMAIL       | varchar(50) | NO   | PRI | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+9 rows in set (0.00 sec)
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+ANIMAL_CARE_D TABLE!
+
+
+mysql> CREATE TABLE ANIMAL_CARE_D (USER_ID INT NOT NULL, ITEM_NAME VARCHAR(20) NOT NULL, QUANTITY INT NOT NULL, DESCRIPTION VARCHAR(100) NOT NULL);
+Query OK, 0 rows affected (0.06 sec)
+
+
+mysql> DESC ANIMAL_CARE_D;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| USER_ID     | int(11)      | NO   |     | NULL    |       |
+| ITEM_NAME   | varchar(20)  | NO   |     | NULL    |       |
+| QUANTITY    | int(11)      | NO   |     | NULL    |       |
+| DESCRIPTION | varchar(100) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+
+mysql>  ALTER TABLE ANIMAL_CARE_D ADD FOREIGN KEY (USER_ID) REFERENCES Donator(USER_ID);
+Query OK, 0 rows affected (0.14 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESC ANIMAL_CARE_D;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| USER_ID     | int(11)      | NO   | MUL | NULL    |       |
+| ITEM_NAME   | varchar(20)  | NO   |     | NULL    |       |
+| QUANTITY    | int(11)      | NO   |     | NULL    |       |
+| DESCRIPTION | varchar(100) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+ANIMAL_CARE_R TABLE!
+
+mysql> CREATE TABLE ANIMAL_CARE_R (USER_ID INT NOT NULL, ITEM_NAME VARCHAR(20) NOT NULL, QUANTITY INT NOT NULL, DESCRIPTION VARCHAR(100) NOT NULL, CONTACT_NUM VARCHAR(11) NOT NULL, MOTIVATION VARCHAR(500) NOT NULL)
+    -> ;
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> DESC ANIMAL_CARE_R;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| USER_ID     | int(11)      | NO   |     | NULL    |       |
+| ITEM_NAME   | varchar(20)  | NO   |     | NULL    |       |
+| QUANTITY    | int(11)      | NO   |     | NULL    |       |
+| DESCRIPTION | varchar(100) | NO   |     | NULL    |       |
+| CONTACT_NUM | varchar(11)  | NO   |     | NULL    |       |
+| MOTIVATION  | varchar(500) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> ALTER TABLE ANIMAL_CARE_R ADD FOREIGN KEY (USER_ID) REFERENCES Recipient(USER_ID);
+Query OK, 0 rows affected (0.13 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESC ANIMAL_CARE_R;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| USER_ID     | int(11)      | NO   | MUL | NULL    |       |
+| ITEM_NAME   | varchar(20)  | NO   |     | NULL    |       |
+| QUANTITY    | int(11)      | NO   |     | NULL    |       |
+| DESCRIPTION | varchar(100) | NO   |     | NULL    |       |
+| CONTACT_NUM | varchar(11)  | NO   |     | NULL    |       |
+| MOTIVATION  | varchar(500) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+CLOTHING_D TABLE!
+
+mysql> CREATE TABLE CLOTHING_D (USER_ID INT NOT NULL, ITEM_NAME VARCHAR(20) NOT NULL, QUANTITY INT NOT NULL, DESCRIPTION VARCHAR(100) NOT NULL);
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> DESC CLOTHING_D;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| USER_ID     | int(11)      | NO   |     | NULL    |       |
+| ITEM_NAME   | varchar(20)  | NO   |     | NULL    |       |
+| QUANTITY    | int(11)      | NO   |     | NULL    |       |
+| DESCRIPTION | varchar(100) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> ALTER TABLE CLOTHING_D ADD FOREIGN KEY (USER_ID) REFERENCES Donator(USER_ID);
+Query OK, 0 rows affected (0.15 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESC CLOTHING_D;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| USER_ID     | int(11)      | NO   | MUL | NULL    |       |
+| ITEM_NAME   | varchar(20)  | NO   |     | NULL    |       |
+| QUANTITY    | int(11)      | NO   |     | NULL    |       |
+| DESCRIPTION | varchar(100) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+
+
+---------------------------------------------------------------------------------------------------------------------
+CLOTHING_R TABLE!
+
+mysql> CREATE TABLE CLOTHING_R (USER_ID INT NOT NULL, ITEM_NAME VARCHAR(20) NOT NULL, QUANTITY INT NOT NULL, DESCRIPTION VARCHAR(100) NOT NULL, CONTACT_NUM VARCHAR(11) NOT NULL, MOTIVATION VARCHAR(500) NOT NULL);
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> DESC CLOTHING_R;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| USER_ID     | int(11)      | NO   |     | NULL    |       |
+| ITEM_NAME   | varchar(20)  | NO   |     | NULL    |       |
+| QUANTITY    | int(11)      | NO   |     | NULL    |       |
+| DESCRIPTION | varchar(100) | NO   |     | NULL    |       |
+| CONTACT_NUM | varchar(11)  | NO   |     | NULL    |       |
+| MOTIVATION  | varchar(500) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql>  ;
+Query OK, 0 rows affected (0.14 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESC CLOTHING_R;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| USER_ID     | int(11)      | NO   | MUL | NULL    |       |
+| ITEM_NAME   | varchar(20)  | NO   |     | NULL    |       |
+| QUANTITY    | int(11)      | NO   |     | NULL    |       |
+| DESCRIPTION | varchar(100) | NO   |     | NULL    |       |
+| CONTACT_NUM | varchar(11)  | NO   |     | NULL    |       |
+| MOTIVATION  | varchar(500) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+FOOD_D TABLE! 
+
+mysql> CREATE TABLE FOOD_D (USER_ID INT NOT NULL, ITEM_NAME VARCHAR(20) NOT NULL, QUANTITY INT NOT NULL, DESCRIPTION VARCHAR(100) NOT NULL);
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> DESC FOOD_D;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| USER_ID     | int(11)      | NO   |     | NULL    |       |
+| ITEM_NAME   | varchar(20)  | NO   |     | NULL    |       |
+| QUANTITY    | int(11)      | NO   |     | NULL    |       |
+| DESCRIPTION | varchar(100) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> ALTER TABLE FOOD_D ADD FOREIGN KEY (USER_ID) REFERENCES Donator(USER_ID);
+Query OK, 0 rows affected (0.29 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESC FOOD_D;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| USER_ID     | int(11)      | NO   | MUL | NULL    |       |
+| ITEM_NAME   | varchar(20)  | NO   |     | NULL    |       |
+| QUANTITY    | int(11)      | NO   |     | NULL    |       |
+| DESCRIPTION | varchar(100) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+FOOD_R TABLE!
+
+mysql> CREATE TABLE FOOD_R (USER_ID INT NOT NULL, ITEM_NAME VARCHAR(20) NOT NULL, QUANTITY INT NOT NULL, DESCRIPTION VARCHAR(100) NOT NULL, CONTACT_NUM VARCHAR(11) NOT NULL, MOTIVATION VARCHAR(500) NOT NULL);
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> DESC FOOD_R;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| USER_ID     | int(11)      | NO   |     | NULL    |       |
+| ITEM_NAME   | varchar(20)  | NO   |     | NULL    |       |
+| QUANTITY    | int(11)      | NO   |     | NULL    |       |
+| DESCRIPTION | varchar(100) | NO   |     | NULL    |       |
+| CONTACT_NUM | varchar(11)  | NO   |     | NULL    |       |
+| MOTIVATION  | varchar(500) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> ALTER TABLE FOOD_R ADD FOREIGN KEY (USER_ID) REFERENCES Recipient(USER_ID);
+Query OK, 0 rows affected (0.12 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESC FOOD_R;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| USER_ID     | int(11)      | NO   | MUL | NULL    |       |
+| ITEM_NAME   | varchar(20)  | NO   |     | NULL    |       |
+| QUANTITY    | int(11)      | NO   |     | NULL    |       |
+| DESCRIPTION | varchar(100) | NO   |     | NULL    |       |
+| CONTACT_NUM | varchar(11)  | NO   |     | NULL    |       |
+| MOTIVATION  | varchar(500) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+HYGIENE_D TABLE!
+
+mysql> CREATE TABLE HYGIENE_D (USER_ID INT NOT NULL, ITEM_NAME VARCHAR(20) NOT NULL, QUANTITY INT NOT NULL, DESCRIPTION VARCHAR(100) NOT NULL);
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> DESC HYGIENE_D;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| USER_ID     | int(11)      | NO   |     | NULL    |       |
+| ITEM_NAME   | varchar(20)  | NO   |     | NULL    |       |
+| QUANTITY    | int(11)      | NO   |     | NULL    |       |
+| DESCRIPTION | varchar(100) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> ALTER TABLE HYGIENE_D ADD FOREIGN KEY (USER_ID) REFERENCES Donator(USER_ID);
+Query OK, 0 rows affected (0.12 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESC HYGIENE_D;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| USER_ID     | int(11)      | NO   | MUL | NULL    |       |
+| ITEM_NAME   | varchar(20)  | NO   |     | NULL    |       |
+| QUANTITY    | int(11)      | NO   |     | NULL    |       |
+| DESCRIPTION | varchar(100) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+
+------------------------------------------------------------------------------------------------------------------------------
+HYGIENE_R TABLE!
+
+mysql> CREATE TABLE HYGIENE_R (USER_ID INT NOT NULL, ITEM_NAME VARCHAR(20) NOT NULL, QUANTITY INT NOT NULL, DESCRIPTION VARCHAR(100) NOT NULL, CONTACT_NUM VARCHAR(11) NOT NULL, MOTIVATION VARCHAR(500) NOT NULL);
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> DESC HYGIENE_R;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| USER_ID     | int(11)      | NO   |     | NULL    |       |
+| ITEM_NAME   | varchar(20)  | NO   |     | NULL    |       |
+| QUANTITY    | int(11)      | NO   |     | NULL    |       |
+| DESCRIPTION | varchar(100) | NO   |     | NULL    |       |
+| CONTACT_NUM | varchar(11)  | NO   |     | NULL    |       |
+| MOTIVATION  | varchar(500) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> ALTER TABLE HYGIENE_R ADD FOREIGN KEY (USER_ID) REFERENCES Recipient(USER_ID);
+Query OK, 0 rows affected (0.31 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESC HYGIENE_R;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| USER_ID     | int(11)      | NO   | MUL | NULL    |       |
+| ITEM_NAME   | varchar(20)  | NO   |     | NULL    |       |
+| QUANTITY    | int(11)      | NO   |     | NULL    |       |
+| DESCRIPTION | varchar(100) | NO   |     | NULL    |       |
+| CONTACT_NUM | varchar(11)  | NO   |     | NULL    |       |
+| MOTIVATION  | varchar(500) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+OTHER_D TABLE!
+
+mysql> CREATE TABLE OTHER_D (USER_ID INT NOT NULL, ITEM_NAME VARCHAR(20) NOT NULL, QUANTITY INT NOT NULL, DESCRIPTION VARCHAR(100) NOT NULL);
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> DESC OTHER_D;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| USER_ID     | int(11)      | NO   |     | NULL    |       |
+| ITEM_NAME   | varchar(20)  | NO   |     | NULL    |       |
+| QUANTITY    | int(11)      | NO   |     | NULL    |       |
+| DESCRIPTION | varchar(100) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> ALTER TABLE OTHER_D ADD FOREIGN KEY (USER_ID) REFERENCES Donator(USER_ID);
+Query OK, 0 rows affected (0.14 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESC OTHER_D;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| USER_ID     | int(11)      | NO   | MUL | NULL    |       |
+| ITEM_NAME   | varchar(20)  | NO   |     | NULL    |       |
+| QUANTITY    | int(11)      | NO   |     | NULL    |       |
+| DESCRIPTION | varchar(100) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+OTHER_R TABLE!
+
+mysql> CREATE TABLE OTHER_R (USER_ID INT NOT NULL, ITEM_NAME VARCHAR(20) NOT NULL, QUANTITY INT NOT NULL, DESCRIPTION VARCHAR(100) NOT NULL, CONTACT_NUM VARCHAR(11) NOT NULL, MOTIVATION VARCHAR(500) NOT NULL);
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> DESC OTHER_R;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| USER_ID     | int(11)      | NO   |     | NULL    |       |
+| ITEM_NAME   | varchar(20)  | NO   |     | NULL    |       |
+| QUANTITY    | int(11)      | NO   |     | NULL    |       |
+| DESCRIPTION | varchar(100) | NO   |     | NULL    |       |
+| CONTACT_NUM | varchar(11)  | NO   |     | NULL    |       |
+| MOTIVATION  | varchar(500) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> ALTER TABLE OTHER_R ADD FOREIGN KEY (USER_ID) REFERENCES Recipient(USER_ID);
+Query OK, 0 rows affected (0.19 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESC OTHER_R;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| USER_ID     | int(11)      | NO   | MUL | NULL    |       |
+| ITEM_NAME   | varchar(20)  | NO   |     | NULL    |       |
+| QUANTITY    | int(11)      | NO   |     | NULL    |       |
+| DESCRIPTION | varchar(100) | NO   |     | NULL    |       |
+| CONTACT_NUM | varchar(11)  | NO   |     | NULL    |       |
+| MOTIVATION  | varchar(500) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+STATIONERY_D TABLE!
+
+mysql> CREATE TABLE STATIONERY_D (USER_ID INT NOT NULL, ITEM_NAME VARCHAR(20) NOT NULL, QUANTITY INT NOT NULL, DESCRIPTION VARCHAR(100) NOT NULL);
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> DESC STATIONERY_D;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| USER_ID     | int(11)      | NO   |     | NULL    |       |
+| ITEM_NAME   | varchar(20)  | NO   |     | NULL    |       |
+| QUANTITY    | int(11)      | NO   |     | NULL    |       |
+| DESCRIPTION | varchar(100) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> ALTER TABLE STATIONERY_D ADD FOREIGN KEY (USER_ID) REFERENCES Donator(USER_ID);
+Query OK, 0 rows affected (0.15 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESC STATIONERY_D;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| USER_ID     | int(11)      | NO   | MUL | NULL    |       |
+| ITEM_NAME   | varchar(20)  | NO   |     | NULL    |       |
+| QUANTITY    | int(11)      | NO   |     | NULL    |       |
+| DESCRIPTION | varchar(100) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+
+
+----------------------------------------------------------------------------------------------------------------------------
+STATIONERY_R TABLE!
+
+mysql> CREATE TABLE STATIONERY_R (USER_ID INT NOT NULL, ITEM_NAME VARCHAR(20) NOT NULL, QUANTITY INT NOT NULL, DESCRIPTION VARCHAR(100) NOT NULL, CONTACT_NUM VARCHAR(11) NOT NULL, MOTIVATION VARCHAR(500) NOT NULL);
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> DESC STATIONERY_R;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| USER_ID     | int(11)      | NO   |     | NULL    |       |
+| ITEM_NAME   | varchar(20)  | NO   |     | NULL    |       |
+| QUANTITY    | int(11)      | NO   |     | NULL    |       |
+| DESCRIPTION | varchar(100) | NO   |     | NULL    |       |
+| CONTACT_NUM | varchar(11)  | NO   |     | NULL    |       |
+| MOTIVATION  | varchar(500) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> ALTER TABLE STATIONERY_R ADD FOREIGN KEY (USER_ID) REFERENCES Recipient(USER_ID);
+Query OK, 0 rows affected (0.14 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESC STATIONERY_R;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| USER_ID     | int(11)      | NO   | MUL | NULL    |       |
+| ITEM_NAME   | varchar(20)  | NO   |     | NULL    |       |
+| QUANTITY    | int(11)      | NO   |     | NULL    |       |
+| DESCRIPTION | varchar(100) | NO   |     | NULL    |       |
+| CONTACT_NUM | varchar(11)  | NO   |     | NULL    |       |
+| MOTIVATION  | varchar(500) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
