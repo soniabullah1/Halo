@@ -8,9 +8,12 @@ Halo is a mobile application that allows users to donate items as well as receiv
   
 ### Welcome, Login & Register:
   
- <img width="250" src="https://user-images.githubusercontent.com/81515681/125668952-00c0154d-0335-485a-9577-f163c9e6e4a3.jpg"> <img width="269" src="https://user-images.githubusercontent.com/81515681/125668965-1d8edf1c-be8d-4a1d-a540-3c160725a6f9.jpg"> <img width="266" src="https://user-images.githubusercontent.com/81515681/125668969-f5bdec48-a8fe-4e9f-96c9-f5fe9198ff99.jpg"> <img width="250" src="https://user-images.githubusercontent.com/81515681/125668975-79f08491-6569-4328-b43f-54c4503d0476.jpg"> <img width="250" src="https://user-images.githubusercontent.com/81515681/125668981-015e0b37-d07f-4682-9f72-0b08fe49b5b1.jpg">
+ <img width="250" src="https://user-images.githubusercontent.com/81515681/125668952-00c0154d-0335-485a-9577-f163c9e6e4a3.jpg"> <img width="269" src="https://user-images.githubusercontent.com/81515681/125668965-1d8edf1c-be8d-4a1d-a540-3c160725a6f9.jpg"> <img width="266" src="https://user-images.githubusercontent.com/81515681/125668969-f5bdec48-a8fe-4e9f-96c9-f5fe9198ff99.jpg"> <img width="270" src="https://user-images.githubusercontent.com/81515681/125668975-79f08491-6569-4328-b43f-54c4503d0476.jpg"> <img width="270" src="https://user-images.githubusercontent.com/81515681/125668981-015e0b37-d07f-4682-9f72-0b08fe49b5b1.jpg">
 
 ### Homepage, Change password & Delete Account:
+  
+ <img width="250" src="https://user-images.githubusercontent.com/81515681/125670339-cd00a6fa-7f04-4975-8a50-77f2ae7766df.jpg"> <img width="250" src="https://user-images.githubusercontent.com/81515681/125670344-980a050a-ac9e-4d31-9ea5-5d7bd8d3e56d.jpg"> <img width="252" src="https://user-images.githubusercontent.com/81515681/125670351-bc952aee-ff06-416a-8388-03a96cb5161a.jpg">
+
   
 ### Donation Process:
   
