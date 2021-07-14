@@ -2,7 +2,7 @@
 
 <p align="center" > <img width="250" alt="lend_a _hand" src="https://user-images.githubusercontent.com/81515681/125654231-08730b33-7045-42ae-85e4-8f77955cb007.png">
 
-Halo is a mobile application that allows users to donate items as well as receive items that they are currently in need of from a predefined list of resources.
+Halo is a mobile application that allows users to donate items to people in need as well as allows users to receive items that they are currently in need of from a predefined list of resources.
 
 ## Screenshots:
   
@@ -28,5 +28,5 @@ Halo is a mobile application that allows users to donate items as well as receiv
   
 ### Settings Page:
   
-  <img width="250" src="https://user-images.githubusercontent.com/81515681/125672000-5f3ad982-d788-4841-ae9a-48b66af60f4b.jpg"> <img width="250" src="https://user-images.githubusercontent.com/81515681/125672021-99f7f23a-8318-4ab3-a322-ccd9262a7af5.jpg"> <img width="248" src="https://user-images.githubusercontent.com/81515681/125672024-5035b710-f5f3-4b7f-8456-b78cb4b6ec68.jpg"> <img width="249" src="https://user-images.githubusercontent.com/81515681/125672029-96f79f22-1f2c-4c70-94de-a814e05e6cf2.jpg">
+  <img width="250" src="https://user-images.githubusercontent.com/81515681/125672000-5f3ad982-d788-4841-ae9a-48b66af60f4b.jpg"> <img width="249" src="https://user-images.githubusercontent.com/81515681/125672029-96f79f22-1f2c-4c70-94de-a814e05e6cf2.jpg"> <img width="250" src="https://user-images.githubusercontent.com/81515681/125672021-99f7f23a-8318-4ab3-a322-ccd9262a7af5.jpg"> <img width="248" src="https://user-images.githubusercontent.com/81515681/125672024-5035b710-f5f3-4b7f-8456-b78cb4b6ec68.jpg"> 
 
