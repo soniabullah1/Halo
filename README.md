@@ -5,7 +5,7 @@
 Halo is a mobile application that allows users to donate items to people in need as well as allows users to receive items that they are currently in need of from a predefined list of resources.
   
 ## Build Status:
-[![CI](https://github.com/soniabullah1/Halo/actions/workflows/main.yml/badge.svg)](https://github.com/soniabullah1/Halo/actions/workflows/main.yml)
+[![Build](https://github.com/soniabullah1/Halo/actions/workflows/main.yml/badge.svg)](https://github.com/soniabullah1/Halo/actions/workflows/main.yml)
   
 
 ## Features Included:
