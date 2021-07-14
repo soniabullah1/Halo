@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF8EC"
+    tools:context=".HomePage">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FAF8EC">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#00008577"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="342dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="28dp"
+            android:shadowColor="#F1A2FF"
+            android:text="Welcome To Your Home Page!"
+            android:textColor="#C73BDF"
+            android:textSize="18sp"
+            app:fontFamily="@font/adamina"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="224dp"
+            android:layout_height="198dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/adamina"
+            android:text="Click the name of the desired category for more information. Alternatively, click the button above to start giving (if you are registered as a donor) or to place your request (if you are registered as a recipient). Please have a look at the Recipient List before making a donation to see if any recipient is in need of the item. Please also take note of the item name for the donation process."
+            android:textColor="#C287CC"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toStartOf="@+id/imageView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <Button
+                android:id="@+id/donate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/adamina"
+                android:text="START DONATING!"
+                android:textColor="#3F51B5"
+                android:textColorHighlight="#E91E63"
+                android:textColorHint="#E91E63"
+                android:textColorLink="#E91E63" />
+
+            <Button
+                android:id="@+id/receive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/adamina"
+                android:text="NEED A DONATION?"
+                android:textColor="#3F51B5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="175dp"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#E5F3E5">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/food"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/bungee_shade"
+                        android:text="FOOD"
+                        android:textColor="#4CAF50"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/food"
+                        android:layout_width="153dp"
+                        android:layout_height="76dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/food" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#FDF0DD">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imageView3"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/bungee_shade"
+                        android:text="CLOTHING"
+                        android:textColor="#FF9800"
+                        android:textSize="18sp" />
+                    //app:fontFamily="@font/aclonica" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="155dp"
+                        android:layout_height="71dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/clothing" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="175dp"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#FFE5EE">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"><![CDATA[
+
+                    //app:fontFamily="@font/aclonica" />
+
+
+
+                    ]]>
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_below="@id/sanitary"
+                        android:layout_marginTop="-13dp"
+                        android:fontFamily="@font/bungee_shade"
+                        android:gravity="center_horizontal"
+                        android:text=" SANITARY &amp; HYGIENE"
+                        android:textColor="#E68AAA"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/sanitary"
+                        android:layout_width="153dp"
+                        android:layout_height="76dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/hygeine" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#DEFBFF">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/stationery"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/bungee_shade"
+                        android:text="STATIONERY"
+                        android:textColor="#6FCAF3"
+                        android:textSize="18sp" />.
+                    // app:fontFamily="@font/aclonica" />
+
+                    <ImageView
+                        android:id="@+id/stationery"
+                        android:layout_width="152dp"
+                        android:layout_height="79dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/stationery" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="175dp"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#E1D1BA">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/care"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/bungee_shade"
+                        android:text="ANIMAL CARE"
+                        android:gravity="center"
+                        android:textColor="#795928"
+                        android:textSize="18sp" />
+                    //app:fontFamily="@font/aclonica" />
+
+                    <ImageView
+                        android:id="@+id/care"
+                        android:layout_width="153dp"
+                        android:layout_height="82dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/animal" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#F1B5B1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/other"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/bungee_shade"
+                        android:text="OTHER"
+                        android:textColor="#F61212"
+                        android:textSize="18sp" />
+                    //app:fontFamily="@font/aclonica" />
+
+                    <ImageView
+                        android:id="@+id/other"
+                        android:layout_width="117dp"
+                        android:layout_height="80dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+
+                        app:srcCompat="@drawable/other" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="148dp"
+            android:layout_height="186dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="250dp"
+            android:layout_marginRight="250dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.412"
+            app:layout_constraintStart_toEndOf="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/lend_a__hand"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

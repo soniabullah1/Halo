@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    tools:context=".GetHelp"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="#FAF8EC"
+    android:id="@+id/constraint"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginEnd="10sp"
+        android:layout_marginBottom="10sp"
+        android:background="#FAF8EC">
+
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FAF8EC"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                app:srcCompat="@drawable/lend_a__hand" />
+
+            <TextView
+                android:id="@+id/textView52"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25sp"
+                android:layout_marginTop="25sp"
+                android:fontFamily="@font/adamina"
+                android:gravity="center"
+                android:text="Get Help"
+                android:textColor="#9C27B0"
+                android:textSize="24sp" />
+
+
+            <TextView
+                android:id="@+id/textView54"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20sp"
+                android:gravity="center"
+                android:text="Please email any one of the two people listed below and we will answer any questions or attend to any concerns as soon as possible. " />
+
+            <TextView
+                android:id="@+id/textView56"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/adamina"
+                android:text="Kineta"
+                android:textColor="#9C27B0"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView57"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Co-Creator of Halo" />
+
+            <TextView
+                android:id="@+id/textView58"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20sp"
+                android:text="1853416@students.wits.ac.za"
+                android:textColor="#2196F3" />
+
+
+            <TextView
+                android:id="@+id/textView60"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/adamina"
+                android:text="Sonia"
+                android:textColor="#9C27B0"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView61"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Co-Creator of Halo" />
+
+            <TextView
+                android:id="@+id/textView62"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2107762@students.wits.ac.za"
+                android:layout_marginBottom="30sp"
+                android:textColor="#2196F3" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="back" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

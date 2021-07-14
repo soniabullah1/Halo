@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    tools:context=".HowToUse"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/constraint"
+    android:background="#FAF8EC"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginEnd="10sp"
+        android:layout_marginBottom="10sp"
+        android:background="#FAF8EC">
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="#FAF8EC"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                app:srcCompat="@drawable/lend_a__hand" />
+
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25sp"
+                android:layout_marginBottom="25sp"
+                android:fontFamily="@font/adamina"
+                android:gravity="center"
+                android:text="How Halo Operates"
+                android:textColor="#9C27B0"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView48"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20sp"
+                android:gravity="center"
+                android:text=" The purpose of this app is to connect donors to recipients in need of the items being donated. After a user has created their personal username, password and registered they will be taken to the home page. This page will allow the user to view items present in each of the six categories: Food, Clothing, Sanitary &amp; Hygiene, Stationery, Animal Care and Other. In each of the categories, the user will be able to view a Donor’s List as well as a Recipient List. The Donor’s List will display all donors who have donated items in the category selected. The donors will be displayed in descending order based on the quantity of goods donated. The Recipient’s List will display recipients that are in need of goods in the selected category. This list will be updated as the recipients receive their donation from the donors.  " />
+
+
+            <TextView
+                android:id="@+id/textView50"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20sp"
+                android:gravity="center"
+                android:text="There are two buttons at the top of the home page. Users who have registered as donors will only be able to fill out a donation form and users that registered as recipients will only be able to fill out request forms. After a donor has filled out his/her form, a list of recipients will appear. The donor can proceed with his/her donation after choosing a recipient to donate to. After this process, it is the donor’s responsibility to contact the recipient and arrange a meeting to give the donation. Recipients will not be paired automatically to a donor but will rather be required to wait for the donor to personally contact them. If they would like to know the progress of their request, they can find more information under the Get Help setting. " />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Back" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

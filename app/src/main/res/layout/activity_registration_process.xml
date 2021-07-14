@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView
+    tools:context=".RegistrationProcess"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/constraint"
+    android:background="#FAF8EC"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="10sp"
+        android:background="#FAF8EC">
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Please Fill in your Details. \n All the Relative Information is Required!"
+                android:textColor="#191970"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/fname"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="15sp"
+                android:layout_marginBottom="5sp"
+                android:background="#B0E0E6"
+                android:hint="First Name:"
+                android:inputType="text"
+                android:textColorHint="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/lname"
+                android:layout_width="match_parent"
+                android:layout_height="45sp"
+                android:layout_marginBottom="5sp"
+                android:background="#B0E0E6"
+                android:hint="Last Name:"
+                android:inputType="text"
+                android:textColorHint="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/dob"
+                android:layout_width="match_parent"
+                android:layout_height="45sp"
+                android:layout_marginBottom="5sp"
+                android:background="#B0E0E6"
+                android:hint="Date of Birth: YYYY-MM-DD"
+                android:inputType="date"
+                android:textColorHint="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="45sp"
+                android:layout_marginBottom="5sp"
+                android:background="#B0E0E6"
+                android:hint="Residential Address:"
+                android:inputType="textLongMessage"
+                android:textColorHint="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/suburb"
+                android:layout_width="match_parent"
+                android:layout_height="45sp"
+                android:layout_marginBottom="5sp"
+                android:background="#B0E0E6"
+                android:hint="Suburb:"
+                android:inputType="text"
+                android:textColorHint="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/contactNum"
+                android:layout_width="match_parent"
+                android:layout_height="45sp"
+                android:layout_marginBottom="5sp"
+                android:background="#B0E0E6"
+                android:hint="Contact Number:"
+                android:inputType="phone"
+                android:textColorHint="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/secondContactNum"
+                android:layout_width="match_parent"
+                android:layout_height="45sp"
+                android:layout_marginBottom="5sp"
+                android:background="#B0E0E6"
+                android:hint="Second Contact Number: (optional)"
+                android:textColorHint="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="45sp"
+                android:layout_marginBottom="5sp"
+                android:background="#B0E0E6"
+                android:hint="Email Address:"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20sp"
+                android:gravity="center"
+                android:text="Please select your preferred choice: "
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10sp">
+
+                <RadioButton
+                    android:id="@+id/donator"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10sp"
+                    android:checked="false"
+                    android:text="Donator" />
+
+                <RadioButton
+                    android:id="@+id/recipient"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10sp"
+                    android:text="Recipient" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/resetBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:layout_weight="1"
+                android:text="RESET SELECTION" />
+
+            <TextView
+                android:id="@+id/selected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20sp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/register"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20sp"
+                android:background="#E6E6FA"
+                android:text="Register Now" />
+
+            <TextView
+                android:id="@+id/display"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="20sp"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/success"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15sp"
+                android:gravity="center"
+                android:textColor="#191970"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15sp"
+                android:layout_marginBottom="15sp"
+                android:background="#E6E6FA"
+                android:text="NEXT" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
