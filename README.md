@@ -14,9 +14,10 @@ Halo is a mobile application that allows users to donate items as well as receiv
   
  <img width="250" src="https://user-images.githubusercontent.com/81515681/125670339-cd00a6fa-7f04-4975-8a50-77f2ae7766df.jpg"> <img width="250" src="https://user-images.githubusercontent.com/81515681/125670344-980a050a-ac9e-4d31-9ea5-5d7bd8d3e56d.jpg"> <img width="252" src="https://user-images.githubusercontent.com/81515681/125670351-bc952aee-ff06-416a-8388-03a96cb5161a.jpg">
 
-  
 ### Donation Process:
   
+  <img width="281" src="https://user-images.githubusercontent.com/81515681/125670995-fae2c9ab-d9c9-49a3-b570-5afd653a4ba8.jpg"> <img width="250" src="https://user-images.githubusercontent.com/81515681/125671002-7363e438-5259-4adc-bd76-217419d47190.jpg"> <img width="264" src="https://user-images.githubusercontent.com/81515681/125671013-80110307-ff40-4d62-b65f-b99147c8e846.jpg"> <img width="280" src="https://user-images.githubusercontent.com/81515681/125671017-e3e22510-3c2e-4f8a-9f63-7f9bc3ed81d8.jpg"> <img width="270" src="https://user-images.githubusercontent.com/81515681/125671021-74f11143-23a9-4274-99d9-d898264481e9.jpg">
+
 ### Requesting Items:
   
 ### Settings Page:
