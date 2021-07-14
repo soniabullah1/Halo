@@ -3,6 +3,17 @@
 <p align="center" > <img width="250" alt="lend_a _hand" src="https://user-images.githubusercontent.com/81515681/125654231-08730b33-7045-42ae-85e4-8f77955cb007.png">
 
 Halo is a mobile application that allows users to donate items to people in need as well as allows users to receive items that they are currently in need of from a predefined list of resources.
+  
+### Features Included:
+
+* Password protected sign-in
+* Option to reset password
+* Change password
+* Delete account
+* View donor and recipient lists in predefined categories 
+* Donate items provided that the user is registered as a donor
+* Request items provided that the user is registered as a recipient
+* View a settings page with information about the application
 
 ## Screenshots:
   
